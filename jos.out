@@ -1,0 +1,38 @@
+*** Now run 'make gdb'.
+***
+6828 decimal is 15254 octal!
+x 1,y 3,z 4
+He110 World
+x=3 y=-267321364
+entering test_backtrace 5
+entering test_backtrace 4
+entering test_backtrace 3
+entering test_backtrace 2
+entering test_backtrace 1
+entering test_backtrace 0
+Stack backtrace:
+ebp f010ff08  eip f010007b  args 00000000 00000000 00000000 00000000 f0100994
+	     kern/init.c:18: test_backtrace+59
+ebp f010ff28  eip f0100068  args 00000000 00000001 f010ff68 00000000 f0100994
+	     kern/init.c:16: test_backtrace+40
+ebp f010ff48  eip f0100068  args 00000001 00000002 f010ff88 00000000 f0100994
+	     kern/init.c:16: test_backtrace+40
+ebp f010ff68  eip f0100068  args 00000002 00000003 f010ffa8 00000000 f0100994
+	     kern/init.c:16: test_backtrace+40
+ebp f010ff88  eip f0100068  args 00000003 00000004 f010ffb8 00000000 f0101972
+	     kern/init.c:16: test_backtrace+40
+ebp f010ffa8  eip f0100068  args 00000004 00000005 f010fff8 f01000d8 f0101972
+	     kern/init.c:16: test_backtrace+40
+ebp f010ffc8  eip f0100110  args 00000005 00000003 f010ffec 00000000 00000000
+	     kern/init.c:47: i386_init+124
+ebp f010fff8  eip f010003e  args 00111021 00000000 00000000 00000000 00000000
+	     kern/entry.S:83: <unknown>+0
+leaving test_backtrace 0
+leaving test_backtrace 1
+leaving test_backtrace 2
+leaving test_backtrace 3
+leaving test_backtrace 4
+leaving test_backtrace 5
+Welcome to the JOS kernel monitor!
+Type 'help' for a list of commands.
+qemu-system-i386: terminating on signal 15 from pid 12708
